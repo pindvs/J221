@@ -1,4 +1,4 @@
-# projekt PixelShelf - system udostępniania zdjęć
+# PixelShelf
 
 PixelShelf to prosta aplikacja webowa, która pozwala użytkownikom wysyłać zdjęcia i nimi zarządzać. 
 Całość jest zbudowana w Node.js z bazą danych MongoDB.
@@ -7,33 +7,29 @@ Całość jest zbudowana w Node.js z bazą danych MongoDB.
 
 FUNKCJE APLIKACJI
 
-- dodawanie zdj
+- dodawanie zdjęć
 - tagowanie zdjęć
-- zarządzanie zdjęciami – możesz edytować tagi albo całkowicie usuwać zdjęcia
-- system sesji – sesje pamiętają zalogowanego użytkownika
+- zarządzanie zdjęciami – można edytować tagi i usuwać zdjęcia
+- system sesji
 
 ------------------------------------------------------------
 
 INSTALACJA I URUCHOMIENIE
 
 1. pobieranie zależności
-wejdź do folderu z projektem w terminalu i wpisz:
+wejdź do folderu z projektem i wpisz w terminalu:
 npm install
-To zainstaluje wszystkie potrzebne moduły: express, mongodb, multer itd.
 
-2. przygotowanie folderu na zdjęcia
-stwórz w głównym katalogu folder 'uploads', bo tam trafiają przesyłane pliki
+3. stwórz w głównym katalogu folder 'uploads', gdzie będą się pojawiać przesłane pliki
 
-3. konfiguracja bazy danych
-aplikacja domyślnie łączy się z MongoDB pod adresem:
+4. konfiguracja bazy danych
+aplikacja domyślnie łączy się pod adresem:
 mongodb://localhost:27017
-upewnij się, że Twoja lokalna baza działa przed startem serwera
+lokalna baza powinna być uruchomiona przed startem aplikacji
 
-4. uruchomienie projektu
-wpisz w konsoli:
+5. uruchomienie projektu:
 npm start
-Serwer powinien wystartować i działać pod adresem:
-http://localhost:3000
+Serwer powinien wystartować i działać pod adresem http://localhost:3000
 
 ------------------------------------------------------------
 
@@ -43,9 +39,3 @@ UŻYTE TECHNOLOGIE
 - baza danych: MongoDB
 - widoki: EJS
 - obsługa plików: Multer
-
-------------------------------------------------------------
-
-UWAGI
-
-Jeśli wystąpi problem z połączeniem do bazy, sprawdź czy URI w pliku data/connection.js jest poprawny dla Twojej instalacji MongoDB.
