@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h1>latest uploads</h1>
+
+    <% photos.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt)) %>
+
+    <% photos.forEach(photo => { %>
+        <div class="photo-item">
+            <img src="/uploads/<%= photo.path %>" alt="Photo"><br>
+            tags: <%= photo.tags.join(', ') %>
+
+            <% if (user && user._id.toString() === photo.userId.toString()) { %>
+                <a href="/photos/edit/<%= photo._id %>"> edit</a>
+                <form action="/photos/delete/<%= photo._id %>" method="POST">
+                    <button type="submit"> delete</button>
+                </form>
+            <% } %>
+        </div>
+    <% }) %>
+</main>
+
+<%- include('../partials/footer') %>

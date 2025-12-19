@@ -1,0 +1,108 @@
+/* Basic styles for Pixelshelf */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/*:root {
+  --text: #0f0e0b;
+  --background: #f9f9f7;
+  --primary: #958973;
+  --secondary: #bec7b5;
+  --accent: #98ac92;
+}*/
+
+:root{
+  --text: #eeeef4;
+  --background: #0c0d15;
+  --primary: #9ea4ce;
+  --secondary: #30376a;
+  --accent: #626ec1;
+}
+
+body {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text)
+}
+
+header {
+    color: var(--text);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+nav a, a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin: auto 20px auto 20px;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#logo {
+  color: var(--primary);
+  height: 50;
+  margin: auto 10px auto 10px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+main img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+input, button{
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+button{
+    background-color: var(--primary);
+}
+
+input::placeholder{
+    color: var(--background)
+}
+
+h1{
+    color: var(--primary)
+}

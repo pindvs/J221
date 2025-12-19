@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<main>
+    <h2>edit tags</h2>
+    <form action="/photos/edit/<%= photo._id %>" method="POST">
+        <input type="text" name="tags" value="<%= photo.tags.join(', ') %>"><br>
+        <button type="submit">save changes</button>
+    </form>
+</main>
+
+<%- include('../partials/footer') %>
